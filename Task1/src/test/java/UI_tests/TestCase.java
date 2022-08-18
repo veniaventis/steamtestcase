@@ -1,40 +1,41 @@
 package UI_tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.AboutPage;
+import pages.MainPage;
+import pages.StorePage;
 
 public class TestCase extends BaseTest{
 
 
     @Test
-    public void checkSteam(){
-        driver.get("https://store.steampowered.com/");
+    public void testMainPage() {
 
-        driver.findElement(By
-                .xpath("//div[@class='supernav_container']//child::a[contains(@href,'about')]"))
-                .click();
+        int countElementsMinePage = new MainPage().goToMainPage().findElement().size();
+        Assert.assertTrue(countElementsMinePage > 0, "Main page is not open");
 
+        MainPage aboutButton = new MainPage();
+        aboutButton.clickOnAboutButton();
 
-        String playersOnline = driver.findElement(By
-                .xpath("//div[contains(@class,'gamers_online')]//parent::div[@class='online_stat']"))
-                .getText()
-                .replaceAll(",","");
+        int countElementsAboutPage = new AboutPage().findElements().size();
+        Assert.assertTrue(countElementsAboutPage > 0,
+                "Button About doesn't working");
 
-        String playersInGame = driver.findElement(By
-                .xpath("//div[contains(@class,'gamers_in_game')]//parent::div[@class='online_stat']"))
-                .getText()
-                .replaceAll(",","");
-//      Parsing to integer
-        int parsePlayersOnLine = (Integer.parseInt(playersOnline.replaceAll("[^0-9]", "")));
-        int parsePlayersInGame = (Integer.parseInt(playersInGame.replaceAll("[^0-9]", "")));
-        Assert.assertTrue(parsePlayersInGame < parsePlayersOnLine, "Number of in-game players is not less than number of players online");
+        Assert.assertTrue(new AboutPage().getPlayersInGame() < new AboutPage().getPlayersOnline(),
+                "Count in game more than online");
 
-        driver.findElement(By
-                .xpath("//a[contains(@class,'supernav') and contains(@href,'global-header')]"))
-                .click();
+        AboutPage storeButton = new AboutPage();
+        storeButton.clickOnStoreButton();
 
+        int countElementsStorePage = new StorePage().findElement().size();
+        Assert.assertTrue(countElementsStorePage > 0 , "Page store doesn't open");
 
     }
+
+
+
+
+
+
 }
