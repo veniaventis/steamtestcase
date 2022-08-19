@@ -1,16 +1,17 @@
 package pages;
 
-import org.openqa.selenium.WebElement;
-import parse_util.ParsingString;
 
+import org.openqa.selenium.interactions.Actions;
+import parse_util.ParsingString;
 import java.time.Duration;
-import java.util.List;
+
 
 public class AboutPage extends BasePage{
+    protected String isOpenElement = "//div[contains(@class,'responsive_page_frame')]";
+    public boolean isOpen = isOpen(isOpenElement);
 
-    public List<WebElement> findElements(){
-        return findElementsByXpath("//div[contains(@class,'responsive_page_frame')]", Duration.ofSeconds(10));
-    }
+
+
 
     public int getPlayersInGame(){
         String playersInGame = findByXpath("//div[contains(@class,'gamers_in_game')]//parent::div[@class='online_stat']",Duration.ofSeconds(10))
@@ -26,12 +27,10 @@ public class AboutPage extends BasePage{
         return ParsingString.parseString(playersOnline);
     }
 
-    public StorePage clickOnStoreButton(){
+    public void clickOnStoreButton(){
 
         findByXpath("//a[contains(@class,'supernav') and contains(@href,'global-header')]",
                 Duration.ofSeconds(10)).click();
-
-        return new StorePage();
 
     }
 

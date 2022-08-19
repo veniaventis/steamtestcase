@@ -1,24 +1,34 @@
 package pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
-import java.util.List;
+
 
 public class MainPage extends BasePage {
 
+    protected String isOpenElement = "//div[contains(@class,'responsive_page_frame')]";
 
-    public  AboutPage clickOnAboutButton(){
+    public boolean isOpen = isOpen(isOpenElement);
 
-        findByXpath("//div[@class='supernav_container']//child::a[contains(@href,'about')]", Duration.ofSeconds(10)).click();
 
-        return new AboutPage();
+    public void clickOnAboutButton(){
+
+        findByXpath("//div[@class='supernav_container']//child::a[contains(@href,'about')]",
+                Duration.ofSeconds(10)).click();
+
     }
 
-    public List<WebElement> findElement(){
+    public void holdNewsAndNoteworthy()  {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(findById("noteworthy_tab", Duration.ofSeconds(10)));
+        actions.perform();
 
-      return findElementsByXpath("//div[contains(@class,'responsive_page_frame')]", Duration.ofSeconds(10));
+    }
 
+    public void clickTopSeller(){
+        findById("noteworthy_flyout", Duration.ofSeconds(10)).click();
     }
 
 
