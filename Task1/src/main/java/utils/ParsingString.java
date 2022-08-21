@@ -1,6 +1,4 @@
-package parse_util;
-
-import org.jetbrains.annotations.NotNull;
+package utils;
 
 public class ParsingString {
 

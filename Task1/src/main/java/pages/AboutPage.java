@@ -1,8 +1,7 @@
 package pages;
 
 
-import org.openqa.selenium.interactions.Actions;
-import parse_util.ParsingString;
+import utils.ParsingString;
 import java.time.Duration;
 
 

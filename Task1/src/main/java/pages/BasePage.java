@@ -56,6 +56,10 @@ public class BasePage {
         return findStrategy;
     }
 
+//    public void clickCheckBox(String xpath){
+//
+//    }
+
 //    public MainPage goToMainPage (){
 //        DriverManager.getDriver().get(mainPage);
 //        return new MainPage();
