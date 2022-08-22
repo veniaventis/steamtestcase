@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Check Steam">
+    <test verbose="2" preserve-order="true" name="SteamTest">
+        <parameter name="url" value="https://store.steampowered.com/"/>
+        <classes>
+            <class name="UI_tests.TestCase">
+                <methods>
+                    <include name="testCase1"/>
+                    <include name="testCase2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

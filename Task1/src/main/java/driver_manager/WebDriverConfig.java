@@ -15,6 +15,7 @@ public class WebDriverConfig {
 
         options.setCapability(CapabilityType.BROWSER_NAME, BrowserType.CHROME);
         options.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+        options.addArguments("--incognito");
 
         return options;
     }

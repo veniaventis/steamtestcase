@@ -25,8 +25,6 @@ public class MainPage extends BasePage {
         actions.moveToElement(findById("noteworthy_tab", Duration.ofSeconds(10))).perform();
     }
 
-
-
     public void clickTopSeller(){
         findByXpath(topSellersBtn, Duration.ofSeconds(20)).click();
     }

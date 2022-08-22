@@ -58,12 +58,5 @@ public class TestCase extends BaseTest{
         FirstItemPage firstItemPage = new FirstItemPage();
         Assert.assertTrue(firstItemPage.isOpen, "First item page doesn't open");
         Assert.assertEquals(forEquals, firstItemPage.getItemInformation(),"Data doesn't match" );
-
-
-
-
-
-
-
     }
 }

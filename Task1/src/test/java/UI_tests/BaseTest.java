@@ -2,8 +2,11 @@ package UI_tests;
 
 import driver_manager.DriverManager;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+
 
 
 public class BaseTest {
@@ -15,7 +18,5 @@ public class BaseTest {
         driver.get(url);
     }
     @AfterTest
-    public void kill(){
-        DriverManager.closeDriver();
-    }
+    public void kill(){DriverManager.closeDriver();}
 }
