@@ -8,10 +8,11 @@ import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
     protected WebDriver driver = DriverManager.getDriver();
+
     protected String url  = "https://store.steampowered.com/";
     @BeforeTest
     public void start(){
-        DriverManager.getDriver().get(url);
+        driver.get(url);
     }
     @AfterTest
     public void kill(){

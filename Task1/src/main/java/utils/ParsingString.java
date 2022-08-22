@@ -10,4 +10,8 @@ public class ParsingString {
 
         return parseStringToInt;
     }
+
+    public static String parseWhiteSpacesAndToLowerCase(String stringToParce){
+        return stringToParce.toLowerCase().replaceAll("\\s","");
+    }
 }

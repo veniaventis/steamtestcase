@@ -14,11 +14,10 @@ public class MainPage extends BasePage {
     public boolean isOpen = isOpen(isOpenElement);
 
 
-    public AboutPage clickOnAboutButton(){
+    public void clickOnAboutButton(){
 
         findByXpath("//div[@class='supernav_container']//child::a[contains(@href,'about')]",
                 Duration.ofSeconds(10)).click();
-        return new AboutPage();
     }
 
     public void holdNewsAndNoteworthy()  {
@@ -28,9 +27,8 @@ public class MainPage extends BasePage {
 
 
 
-    public TopSellers clickTopSeller(){
+    public void clickTopSeller(){
         findByXpath(topSellersBtn, Duration.ofSeconds(20)).click();
-        return new TopSellers();
     }
 
 

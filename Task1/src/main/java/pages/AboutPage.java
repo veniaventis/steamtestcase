@@ -32,9 +32,4 @@ public class AboutPage extends BasePage{
                 Duration.ofSeconds(10)).click();
 
     }
-
-
-
-
-
 }

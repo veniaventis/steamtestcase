@@ -3,8 +3,11 @@ package UI_tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AboutPage;
+import pages.FirstItemPage;
 import pages.MainPage;
 import pages.TopSellers;
+
+import java.util.List;
 
 public class TestCase extends BaseTest{
 
@@ -28,6 +31,8 @@ public class TestCase extends BaseTest{
 
     @Test
     public void testCase2() throws InterruptedException {
+
+
         MainPage mainPage = new MainPage();
 
         mainPage.holdNewsAndNoteworthy();
@@ -44,6 +49,17 @@ public class TestCase extends BaseTest{
 
         topSellers.clickTag();
         Assert.assertTrue(topSellers.isSelected);
+        Assert.assertEquals(topSellers.getFoundCountItems(),topSellers.checkCountItems(),
+                "The amount written does not match the actual amount." );
+        List forEquals = topSellers.getItemInformation();
+
+        topSellers.clickFirstItem();
+
+        FirstItemPage firstItemPage = new FirstItemPage();
+        Assert.assertTrue(firstItemPage.isOpen, "First item page doesn't open");
+        Assert.assertEquals(forEquals, firstItemPage.getItemInformation(),"Data doesn't match" );
+
+
 
 
 
