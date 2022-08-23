@@ -61,8 +61,7 @@ public class TestCase extends BaseTest{
         MainPage mainPage = new MainPage();
         Assert.assertTrue(mainPage.isOpen);
 
-        mainPage.holdCommunity();
-        mainPage.communityMarketClick();
+        mainPage.holdCommunityAndClick();
 
         CommunityMarketPage communityMarketPage = new CommunityMarketPage();
         Assert.assertTrue(communityMarketPage.isOpenPage());
