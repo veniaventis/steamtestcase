@@ -2,10 +2,7 @@ package UI_tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.AboutPage;
-import pages.FirstItemPage;
-import pages.MainPage;
-import pages.TopSellers;
+import pages.*;
 
 import java.util.List;
 
@@ -51,12 +48,36 @@ public class TestCase extends BaseTest{
         Assert.assertTrue(topSellers.isSelected);
         Assert.assertEquals(topSellers.getFoundCountItems(),topSellers.checkCountItems(),
                 "The amount written does not match the actual amount." );
-        List forEquals = topSellers.getItemInformation();
+        List<String> forEquals = topSellers.getItemInformation();
 
         topSellers.clickFirstItem();
 
         FirstItemPage firstItemPage = new FirstItemPage();
         Assert.assertTrue(firstItemPage.isOpen, "First item page doesn't open");
         Assert.assertEquals(forEquals, firstItemPage.getItemInformation(),"Data doesn't match" );
+    }
+    @Test
+    public void testCase3() throws InterruptedException {
+        MainPage mainPage = new MainPage();
+        Assert.assertTrue(mainPage.isOpen);
+
+        mainPage.holdCommunity();
+        mainPage.communityMarketClick();
+
+        CommunityMarketPage communityMarketPage = new CommunityMarketPage();
+        Assert.assertTrue(communityMarketPage.isOpenPage());
+
+        communityMarketPage.setShowAdvancedOptionsClick();
+        Assert.assertTrue(communityMarketPage.isOpen);
+
+        communityMarketPage.clickChoiceGame();
+        communityMarketPage.clickDota2();
+        communityMarketPage.choiceHeroClick();
+        communityMarketPage.clickCheckBoxRarity();
+        communityMarketPage.inputSearch();
+        Thread.sleep(5000);
+
+
+
     }
 }
