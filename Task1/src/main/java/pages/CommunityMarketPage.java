@@ -1,9 +1,12 @@
 package pages;
 
 import org.openqa.selenium.Keys;
+import utils.ParsingString;
 
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CommunityMarketPage extends BasePage{
 
@@ -16,6 +19,10 @@ public class CommunityMarketPage extends BasePage{
     protected String heroLocator = "//option[contains(@value,'life_stealer')]";//xpath
     protected String rarityCheckBoxLocator = "tag_570_Rarity_Rarity_Immortal";//id
     protected String inputSearchLocator = "advancedSearchBox";//id
+    protected String filtersLocator = "//div[contains(@style,'inline-block')]//child::a";
+    public List<String> exceptionList = new ArrayList<>();
+
+
     public boolean isOpen;
 
 
@@ -49,5 +56,26 @@ public class CommunityMarketPage extends BasePage{
         findById(inputSearchLocator,Duration.ofSeconds(10)).click();
         findById(inputSearchLocator, Duration.ofSeconds(10)).sendKeys("golden");
         findById(inputSearchLocator,Duration.ofSeconds(10)).sendKeys(Keys.ENTER);
+        addExceptionList();
     }
+    public List<String> getTextGameFilter(){
+        List<String> filtersText = new ArrayList<>();
+        for(int a = 0; a < 4;){
+            filtersText.add(ParsingString.parseWhiteSpacesAndToLowerCase(findByXpath(filtersLocator+ "["+ ++a +"]" ,Duration.ofSeconds(10)).getText()));
+        }
+        return filtersText;
+    }
+
+//    public List<String> getItemsName(){
+//        List<String> itemsText = new ArrayList<>();
+//
+//    }
+
+    private void addExceptionList(){
+        exceptionList.add("dota2");
+        exceptionList.add("lifestealer");
+        exceptionList.add("immortal");
+        exceptionList.add("\"golden\"");
+    }
+
 }

@@ -74,7 +74,8 @@ public class TestCase extends BaseTest{
         communityMarketPage.choiceHeroClick();
         communityMarketPage.clickCheckBoxRarity();
         communityMarketPage.inputSearch();
-        Thread.sleep(5000);
+        List<String> filterText = communityMarketPage.getTextGameFilter();
+        Assert.assertEquals(filterText,communityMarketPage.exceptionList,"Filter selected incorrectly");
 
 
 
