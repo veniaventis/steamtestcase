@@ -1,0 +1,120 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"fc2beca3-68ca-4051-aca5-399201a01011\" name=\"Changes\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2DUXGDlgIEuGmA6DsqMnlqcZZYS\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"autoscrollFromSource\" value=\"true\" />\r\n    <option name=\"autoscrollToSource\" value=\"true\" />\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"fc2beca3-68ca-4051-aca5-399201a01011\" name=\"Changes\" comment=\"\" />\r\n      <created>1660754538988</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1660754538988</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"origin/task1\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision c07654d1011a06d869c1417fde75379ea11f2d19)
++++ b/.idea/workspace.xml	(date 1661323010652)
+@@ -1,7 +1,15 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="fc2beca3-68ca-4051-aca5-399201a01011" name="Changes" comment="" />
++    <list default="true" id="c47d14e5-ba55-4e6e-a482-a1f3354875c9" name="Changes" comment="Task2 commit&#10;Test Case 1 done&#10;Test Case 2 done&#10;Test Case 3 (Step 5 Need write asserts)...">
++      <change beforePath="$PROJECT_DIR$/Task1/src/main/java/driver_manager/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task1/src/main/java/driver_manager/DriverManager.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Task1/target/classes/driver_manager/WebDriverConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/Task1/target/classes/driver_manager/WebDriverConfig.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Task1/target/test-classes/UI_tests/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Task1/target/test-classes/UI_tests/BaseTest.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Task1/target/test-classes/UI_tests/TestCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/Task1/target/test-classes/UI_tests/TestCase.class" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -18,6 +26,13 @@
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
++  <component name="MavenImportPreferences">
++    <option name="generalSettings">
++      <MavenGeneralSettings>
++        <option name="useMavenConfig" value="true" />
++      </MavenGeneralSettings>
++    </option>
++  </component>
+   <component name="ProjectId" id="2DUXGDlgIEuGmA6DsqMnlqcZZYS" />
+   <component name="ProjectViewState">
+     <option name="autoscrollFromSource" value="true" />
+@@ -25,12 +40,12 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+Index: Task1/src/main/java/driver_manager/DriverManager.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package driver_manager;\r\n\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.chrome.ChromeDriver;\r\n\r\npublic class DriverManager {\r\n\r\n    private static WebDriver driver;\r\n\r\n    private static void setDriver() {\r\n        driver = new ChromeDriver(WebDriverConfig.configChrome());\r\n    }\r\n\r\n    public static WebDriver getDriver() {\r\n        if (driver == null) {\r\n            setDriver();\r\n        }\r\n        return driver;\r\n    }\r\n\r\n    public static void closeDriver() {\r\n        driver.close();\r\n        driver.quit();\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Task1/src/main/java/driver_manager/DriverManager.java b/Task1/src/main/java/driver_manager/DriverManager.java
+--- a/Task1/src/main/java/driver_manager/DriverManager.java	(revision c07654d1011a06d869c1417fde75379ea11f2d19)
++++ b/Task1/src/main/java/driver_manager/DriverManager.java	(date 1661322732359)
+@@ -24,3 +24,6 @@
+     }
+ 
+ }
++
++
++
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision c07654d1011a06d869c1417fde75379ea11f2d19)
++++ b/.idea/misc.xml	(date 1661323010683)
+@@ -1,6 +1,13 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager">
++  <component name="MavenProjectsManager">
++    <option name="originalFiles">
++      <list>
++        <option value="$PROJECT_DIR$/Task1/pom.xml" />
++      </list>
++    </option>
++  </component>
++  <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-18" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectModuleManager\">\r\n    <modules>\r\n      <module fileurl=\"file://$PROJECT_DIR$/.idea/d.ventsis.iml\" filepath=\"$PROJECT_DIR$/.idea/d.ventsis.iml\" />\r\n    </modules>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+--- a/.idea/modules.xml	(revision c07654d1011a06d869c1417fde75379ea11f2d19)
++++ b/.idea/modules.xml	(date 1661323007927)
+@@ -2,6 +2,7 @@
+ <project version="4">
+   <component name="ProjectModuleManager">
+     <modules>
++      <module fileurl="file://$PROJECT_DIR$/Task1/Task1.iml" filepath="$PROJECT_DIR$/Task1/Task1.iml" />
+       <module fileurl="file://$PROJECT_DIR$/.idea/d.ventsis.iml" filepath="$PROJECT_DIR$/.idea/d.ventsis.iml" />
+     </modules>
+   </component>
