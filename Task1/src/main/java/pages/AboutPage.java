@@ -1,35 +1,32 @@
 package pages;
 
 
+import org.openqa.selenium.By;
 import utils.ParsingString;
-import java.time.Duration;
+
 
 
 public class AboutPage extends BasePage{
-    protected String isOpenElement = "//div[contains(@class,'responsive_page_frame')]";
+    private final By isOpenElement = By.xpath("//div[contains(@class,'responsive_page_frame')]");
+    private final By playersInGameLocator = By.xpath( "//div[contains(@class,'gamers_in_game')]//parent::div[@class='online_stat']");
+    private final By playersOnlineLocator = By.xpath("//div[contains(@class,'gamers_online')]//parent::div[@class='online_stat']");
+    private final By storeBtnLocator  = By.xpath("//div[contains(@class,'supernav_container')]//child::a[contains(@data-tooltip-content,'store')]");
     public boolean isOpen = isOpen(isOpenElement);
 
 
 
-
     public int getPlayersInGame(){
-        String playersInGame = findByXpath("//div[contains(@class,'gamers_in_game')]//parent::div[@class='online_stat']",Duration.ofSeconds(10))
-                .getText()
-                .replaceAll(",","");
+        String playersInGame = driver.findElement(playersInGameLocator).getText();
         return ParsingString.parseString(playersInGame);
     }
 
     public int getPlayersOnline(){
-        String playersOnline = findByXpath("//div[contains(@class,'gamers_online')]//parent::div[@class='online_stat']", Duration.ofSeconds(10))
-                .getText()
-                .replaceAll(",","");
+        String playersOnline =driver.findElement(playersOnlineLocator).getText();
         return ParsingString.parseString(playersOnline);
     }
 
     public void clickOnStoreButton(){
-
-        findByXpath("//a[contains(@class,'supernav') and contains(@href,'global-header')]",
-                Duration.ofSeconds(10)).click();
+        driver.findElement(storeBtnLocator).click();
 
     }
 }

@@ -6,7 +6,7 @@ public class ParsingString {
 
     public static int parseString(String parseString){
 
-        parseStringToInt = Integer.parseInt(parseString.replaceAll("[^0-9]", ""));
+        parseStringToInt = Integer.parseInt(parseString.replaceAll("[^0-9]", "").replaceAll(",",""));
 
         return parseStringToInt;
     }

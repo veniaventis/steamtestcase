@@ -1,26 +1,25 @@
 package pages;
 
+import org.openqa.selenium.By;
 import utils.ParsingString;
-
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FirstItemPage extends BasePage{
-    protected String isOpenLocator = "//div[@id='appHubAppName']";
+    private final By isOpenLocator = By.xpath("//div[@id='appHubAppName']");
     public boolean isOpen = isOpen(isOpenLocator);
 
-    protected String itemNameLocator = "//div[@id='appHubAppName']" ;
-    protected String itemReleaseDateLocator = "//div[contains(@class,'release_date')]//child::div[@class='date']";
-    protected String itemPriceLocator = "//div[contains(@class,'game_purchase_discount')]";
+    private final By itemNameLocator = By.xpath( "//div[@id='appHubAppName']");
+    private final By itemReleaseDateLocator = By.xpath("//div[contains(@class,'release_date')]//child::div[@class='date']");
+    private final By itemPriceLocator = By.xpath("//div[contains(@class,'game_purchase_discount')]");
 
 
 
     public List<String> getItemInformation() {
             List<String> itemInformation = new ArrayList<>();
-            itemInformation.add(ParsingString.parseWhiteSpacesAndToLowerCase(findByXpath(itemNameLocator, Duration.ofSeconds(10)).getText()));
-            itemInformation.add(ParsingString.parseWhiteSpacesAndToLowerCase(findByXpath(itemReleaseDateLocator, Duration.ofSeconds(10)).getText()));
-            itemInformation.add(ParsingString.parseWhiteSpacesAndToLowerCase(findByXpath(itemPriceLocator, Duration.ofSeconds(10)).getAttribute("data-price-final")));
+            itemInformation.add(ParsingString.parseWhiteSpacesAndToLowerCase(driver.findElement(itemNameLocator).getText()));
+            itemInformation.add(ParsingString.parseWhiteSpacesAndToLowerCase(driver.findElement(itemReleaseDateLocator).getText()));
+            itemInformation.add(ParsingString.parseWhiteSpacesAndToLowerCase(driver.findElement(itemPriceLocator).getAttribute("data-price-final")));
             return itemInformation;
 
     }

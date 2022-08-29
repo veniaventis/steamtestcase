@@ -19,38 +19,6 @@ public class DriverManager {
     }
 
     public static void closeDriver() {
-        driver.close();
         driver.quit();
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
