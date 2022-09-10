@@ -4,7 +4,6 @@ import driver_manager.DriverManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-
 import java.util.concurrent.TimeUnit;
 
 
